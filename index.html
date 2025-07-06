@@ -981,7 +981,7 @@
 								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}"
 								data-widget_type="heading.default">
 								<div class="elementor-widget-container">
-									<h3 class="elementor-heading-title elementor-size-default">VISON</h3>
+									<h3 class="elementor-heading-title elementor-size-default">VISION</h3>
 								</div>
 							</div>
 							<div class="elementor-element elementor-element-91b6244 at-heading-animation at-animation-heading-style-3 elementor-widget elementor-widget-heading"
@@ -1002,6 +1002,76 @@
 				</div>
 			</div>
 		</div>
+
+
+		<section style="overflow: hidden; position: relative; padding: 40px 0;">
+  <div id="carousel-wrapper" style="white-space: nowrap; display: flex; animation: scrollLeft 10s linear infinite;"></div>
+</section>
+
+<style>
+  #carousel-wrapper img {
+    height: 100px;
+    margin: 0 15px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+  }
+
+  #carousel-wrapper img:hover {
+    transform: scale(1.05);
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    #carousel-wrapper img {
+      height: 70px;
+      margin: 0 10px;
+    }
+  }
+</style>
+
+<script>
+  const imageUrls = [
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/5d1b5eeab994134872395303_Aera-p-500.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/596e44d5fc28ee3d638aadf3_ALATION3.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/62b47daf0c8255dbb27dd1e8_Alloy_Logo-p-500.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/5ba4e6d4e4607375821899ce_Anaplan-p-500.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/586331b6743316b605bcab22_AppDynamics.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/6100819aaa0dea686a6f1a7a_At-Bay_Logo.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/5697cecc653e7a8073a3e2d9_Aveksa%20v2.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/564a8a0d8c9d5bcc588c8e32_Axonify.jpg",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/5f186dbe8e7bef7a585ea307_Bambuser.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/681b9a4791821a1d846c381f_Bedrock.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/60dd8d66a40f8e24f9773b48_gradle-dark-green-primary-p-500.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/67b8d6a8891e9440752d80bc_Coderabbit-p-500.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/5bab8d8023d26009c71ec514_Capella%20Space.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/65e8affd0fd40c1d8fcb944e_betr_Logo.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/62b480b1dc8fb82d9a9b607a_Wonder-p-500.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/61f076047f0a96a7b5532870_Nuvemshop-p-500.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/5ae34c6dc635c238d306d9a8_mparticle.png",
+    "https://cdn.prod.website-files.com/564a8a0d8c9d5bcc588c8dc4/676717ed2af9ba69f0988b70_halcyon.png"
+  ];
+
+  const wrapper = document.getElementById("carousel-wrapper");
+
+  // Duplicate the images to make infinite scroll illusion
+  const allImages = [...imageUrls, ...imageUrls]; // Double for loop effect
+  allImages.forEach((url, i) => {
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = `Logo ${i + 1}`;
+    wrapper.appendChild(img);
+  });
+</script>
+
+
 		
 		<div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
 			<div data-elementor-type="wp-post" data-elementor-id="1688" class="elementor elementor-1688">
